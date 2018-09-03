@@ -8,14 +8,18 @@
 
 import UIKit
 
+private let reuseIdentifier = "device_cell"
+
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
-    
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         getBackgroundImage()
         // Do any additional setup after loading the view, typically from a nib.
@@ -63,7 +67,29 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
+
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        // this will always be 1, for now
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? DeviceCollectionViewCell
+        
+        return cell!
+    }
+}
+
+
+
+
+
+
 
