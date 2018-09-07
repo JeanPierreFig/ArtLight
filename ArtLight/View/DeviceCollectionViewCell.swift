@@ -20,13 +20,21 @@ class DeviceCollectionViewCell: UICollectionViewCell {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.white
-        label.font = UIFont.boldSystemFont(ofSize: 18.0)
+        label.font = UIFont.boldSystemFont(ofSize: 13.0)
         return label
+    }()
+    
+    var liveIndicator: DotIndicator = {
+        let indicator = DotIndicator(frame:.zero)
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        indicator.isLive = true
+        return indicator
     }()
     
     private func setupSubviews() {
         self.contentView.addSubview(background)
         self.contentView.addSubview(titleLabel)
+        self.contentView.addSubview(liveIndicator)
     }
     
     private func setupConstraints() {
@@ -35,8 +43,13 @@ class DeviceCollectionViewCell: UICollectionViewCell {
         background.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
         background.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         
+        liveIndicator.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 4).isActive = true
+        liveIndicator.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor, constant: 0).isActive = true
+        liveIndicator.widthAnchor.constraint(equalToConstant: 8).isActive = true
+        liveIndicator.heightAnchor.constraint(equalToConstant: 8).isActive = true
+        
         titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: liveIndicator.trailingAnchor, constant: 4).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5).isActive = true
     }
     
