@@ -72,12 +72,12 @@
                             <constraint firstItem="980-7S-04Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="B64-30-T35"/>
                             <constraint firstItem="c7P-Gu-WCh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LCa-E2-pHZ"/>
                             <constraint firstItem="c7P-Gu-WCh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RBV-c4-nAb"/>
+                            <constraint firstAttribute="bottom" secondItem="c7P-Gu-WCh" secondAttribute="bottom" id="XAV-up-NY0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="980-7S-04Y" secondAttribute="trailing" constant="16" id="Xda-9w-PDg"/>
                             <constraint firstItem="Qlq-fu-RXH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZaS-VN-Pnf"/>
                             <constraint firstItem="Qlq-fu-RXH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dsh-He-jSf"/>
                             <constraint firstItem="c7P-Gu-WCh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="etb-bW-765"/>
                             <constraint firstItem="Qlq-fu-RXH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="heg-b3-SBN"/>
-                            <constraint firstItem="c7P-Gu-WCh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="q6L-Hr-0Lj"/>
                             <constraint firstItem="980-7S-04Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vzg-Bt-6pT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -85,11 +85,27 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="c7P-Gu-WCh" id="Jhi-ee-ox0"/>
                         <outlet property="collectionView" destination="Qlq-fu-RXH" id="5vH-ac-eom"/>
+                        <segue destination="UiS-2S-imQ" kind="presentation" identifier="ControllerSegue" id="SVU-bU-fpB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="105.69715142428787"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FDQ-rv-1dP">
+            <objects>
+                <viewController id="UiS-2S-imQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nwk-k8-4qU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="b4P-i5-nNM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQf-xi-gIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068" y="106"/>
         </scene>
     </scenes>
     <resources>

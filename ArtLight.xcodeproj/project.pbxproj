@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		43FA0564363E435EE55D107A /* Pods_ArtLight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91D43B5D736350F2303F550 /* Pods_ArtLight.framework */; };
 		F76493AE213CCFE400E98ED5 /* DeviceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76493AD213CCFE400E98ED5 /* DeviceCollectionViewCell.swift */; };
-		F76493B0213CDEA500E98ED5 /* Screen Shot 2018-08-31 at 11.49.30 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = F76493AF213CDEA500E98ED5 /* Screen Shot 2018-08-31 at 11.49.30 AM.png */; };
+		F76493B0213CDEA500E98ED5 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = F76493AF213CDEA500E98ED5 /* test.png */; };
+		F76493B2213D41C900E98ED5 /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76493B1213D41C900E98ED5 /* ControlViewController.swift */; };
+		F76493B4213D56A000E98ED5 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76493B3213D56A000E98ED5 /* Device.swift */; };
+		F7A4E1D02142027B004B824D /* LightColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A4E1CF2142027B004B824D /* LightColor.swift */; };
 		F7DB4EDA2139F4D400E03A4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DB4ED92139F4D400E03A4B /* AppDelegate.swift */; };
 		F7DB4EDC2139F4D400E03A4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DB4EDB2139F4D400E03A4B /* ViewController.swift */; };
 		F7DB4EDF2139F4D400E03A4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7DB4EDD2139F4D400E03A4B /* Main.storyboard */; };
@@ -22,7 +25,10 @@
 		C9DEB563F60634ED16901DF7 /* Pods-ArtLight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtLight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtLight/Pods-ArtLight.debug.xcconfig"; sourceTree = "<group>"; };
 		EC4BC5DB347396BAFD706F28 /* Pods-ArtLight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtLight.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtLight/Pods-ArtLight.release.xcconfig"; sourceTree = "<group>"; };
 		F76493AD213CCFE400E98ED5 /* DeviceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCollectionViewCell.swift; sourceTree = "<group>"; };
-		F76493AF213CDEA500E98ED5 /* Screen Shot 2018-08-31 at 11.49.30 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-08-31 at 11.49.30 AM.png"; sourceTree = "<group>"; };
+		F76493AF213CDEA500E98ED5 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		F76493B1213D41C900E98ED5 /* ControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlViewController.swift; sourceTree = "<group>"; };
+		F76493B3213D56A000E98ED5 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		F7A4E1CF2142027B004B824D /* LightColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightColor.swift; sourceTree = "<group>"; };
 		F7DB4ED62139F4D300E03A4B /* ArtLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7DB4ED92139F4D400E03A4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7DB4EDB2139F4D400E03A4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +70,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F7A4E1D12142030F004B824D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7A4E1CF2142027B004B824D /* LightColor.swift */,
+				F76493B3213D56A000E98ED5 /* Device.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F7A4E1D221420320004B824D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F7DB4EDB2139F4D400E03A4B /* ViewController.swift */,
+				F76493B1213D41C900E98ED5 /* ControlViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F7A4E1D321420334004B824D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F76493AD213CCFE400E98ED5 /* DeviceCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F7DB4ECD2139F4D300E03A4B = {
 			isa = PBXGroup;
 			children = (
@@ -85,11 +117,12 @@
 		F7DB4ED82139F4D300E03A4B /* ArtLight */ = {
 			isa = PBXGroup;
 			children = (
-				F76493AF213CDEA500E98ED5 /* Screen Shot 2018-08-31 at 11.49.30 AM.png */,
+				F76493AF213CDEA500E98ED5 /* test.png */,
 				F7DB4EED213A778300E03A4B /* Bridging-Header.h */,
 				F7DB4ED92139F4D400E03A4B /* AppDelegate.swift */,
-				F7DB4EDB2139F4D400E03A4B /* ViewController.swift */,
-				F76493AD213CCFE400E98ED5 /* DeviceCollectionViewCell.swift */,
+				F7A4E1D221420320004B824D /* Controller */,
+				F7A4E1D12142030F004B824D /* Model */,
+				F7A4E1D321420334004B824D /* View */,
 				F7DB4EDD2139F4D400E03A4B /* Main.storyboard */,
 				F7DB4EEB2139F4ED00E03A4B /* Login.storyboard */,
 				F7DB4EE02139F4D500E03A4B /* Assets.xcassets */,
@@ -161,7 +194,7 @@
 			files = (
 				F7DB4EEC2139F4ED00E03A4B /* Login.storyboard in Resources */,
 				F7DB4EE42139F4D500E03A4B /* LaunchScreen.storyboard in Resources */,
-				F76493B0213CDEA500E98ED5 /* Screen Shot 2018-08-31 at 11.49.30 AM.png in Resources */,
+				F76493B0213CDEA500E98ED5 /* test.png in Resources */,
 				F7DB4EE12139F4D500E03A4B /* Assets.xcassets in Resources */,
 				F7DB4EDF2139F4D400E03A4B /* Main.storyboard in Resources */,
 			);
@@ -219,8 +252,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F76493B4213D56A000E98ED5 /* Device.swift in Sources */,
 				F76493AE213CCFE400E98ED5 /* DeviceCollectionViewCell.swift in Sources */,
+				F7A4E1D02142027B004B824D /* LightColor.swift in Sources */,
 				F7DB4EDC2139F4D400E03A4B /* ViewController.swift in Sources */,
+				F76493B2213D41C900E98ED5 /* ControlViewController.swift in Sources */,
 				F7DB4EDA2139F4D400E03A4B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
